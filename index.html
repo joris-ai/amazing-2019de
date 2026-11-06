@@ -150,7 +150,7 @@ footer{background:#14171b;color:#8f8c85;font-size:12px;padding:18px 0}
 .lb span{position:absolute;left:0;right:0;bottom:18px;text-align:center;color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
 .lb button{position:absolute;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:44px;line-height:1;padding:14px;cursor:pointer;opacity:.85}
 .lb .pv{left:8px}.lb .nx{right:8px}.lb .cl{top:14px;right:14px;transform:none;font-size:34px}
-</style>
+.reqrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.reqrow .btn{margin-top:0}.btn.alt{background:transparent;color:var(--accent);border:1px solid var(--accent);cursor:pointer;font-family:inherit;line-height:1.2}.mailnote{font-size:13px;opacity:.75;margin-top:12px}</style>
 </head>
 <body>
 
@@ -460,7 +460,7 @@ footer{background:#14171b;color:#8f8c85;font-size:12px;padding:18px 0}
         <p>Amazing International Real Estate</p>
         <p><a href="mailto:sales@amazing-realestate.com">sales@amazing-realestate.com</a></p>
         <p><a href="https://www.amazing-realestate.com" target="_blank" rel="noopener">amazing-realestate.com</a></p>
-        <a class="btn" href="mailto:sales@amazing-realestate.com?subject=Ref.%202019DE%20Berlin%20loft" target="_blank" rel="noopener">Request the presentation</a>
+        <div class="reqrow"><a class="btn" href="mailto:sales@amazing-realestate.com?subject=Ref.%202019DE%20Berlin%20loft&body=Please%20send%20me%20the%20investor%20presentation%20for%20Ref.%202019DE.">Request the presentation</a><a class="btn alt" href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@amazing-realestate.com&su=Ref.%202019DE%20Berlin%20loft&body=Please%20send%20me%20the%20investor%20presentation%20for%20Ref.%202019DE." target="_blank" rel="noopener">Open in Gmail</a><button type="button" class="btn alt" id="copymail">Copy address</button></div><p class="mailnote">No mail app opening? Write to <span id="mailaddr" style="user-select:all">sales@amazing-realestate.com</span>, subject "Ref. 2019DE Berlin loft".</p>
       </div>
     </div>
     <p class="fine">Private viewings by appointment. Buyers from any country buy on the same legal terms. Yield and market figures are illustrative calculations at €20/m² monthly rent, subject to Berlin rent regulation. They are not a forecast or advice. Purchase costs (transfer tax 6.0%, notary and registry) are additional. Illustrative calculations; not investment, tax or legal advice. Property details per the listing agent's exposé; subject to change and prior sale. Exact address shared with qualified buyers.</p>
@@ -475,5 +475,5 @@ function show(i){k=(i+imgs.length)%imgs.length;im.src=imgs[k].src;im.alt=imgs[k]
 imgs.forEach(function(e,i){e.addEventListener('click',function(){show(i)})});
 lb.addEventListener('click',function(ev){var t=ev.target;if(t.classList.contains('pv')){show(k-1)}else if(t.classList.contains('nx')){show(k+1)}else{lb.classList.remove('on')}});
 document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')show(k-1);if(e.key==='ArrowRight')show(k+1)});})();</script>
-</body>
+<script>(function(){var b=document.getElementById("copymail");if(!b)return;b.addEventListener("click",function(){var t="sales@amazing-realestate.com";function ok(){b.textContent="Copied";setTimeout(function(){b.textContent="Copy address"},2000)}function fb(){try{var r=document.createRange();r.selectNodeContents(document.getElementById("mailaddr"));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selected - copy it"}catch(e){}}try{navigator.clipboard.writeText(t).then(ok,fb)}catch(e){fb()}})})();</script></body>
 </html>
